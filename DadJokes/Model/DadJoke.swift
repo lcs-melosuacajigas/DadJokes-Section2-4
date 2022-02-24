@@ -12,7 +12,8 @@ import Foundation
 // Swift to be able to take a JSON object
 // and 'decode' into an instance of this
 // structure
-struct DadJoke: Decodable, Identifiable {
+// Hashable protocol conformance - just means that Swift will be able to quickly dtermine when one instance of this data type differs from another
+struct DadJoke: Decodable, Hashable {
     let id: String
     let joke: String
     let status: Int
